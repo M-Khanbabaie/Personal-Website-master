@@ -753,15 +753,19 @@ p{
 
 footer p{
     text-align: center;
+    padding-bottom: 3%;
 }
 
 /* Start styling the up-arrow */
 
+.arrow{
+    position: sticky;
+    margin-left: 94%;
+    bottom: 4px;
+}
+
 #arrow{
     display: none;
-    position: fixed;
-    left: 93%;
-    bottom: 4px;
     font-size: 3em;
     transition: all .2s ease;
 }
@@ -774,6 +778,12 @@ footer p{
     cursor: pointer;
     transform: scale(1.2);
     color: darkgray;
+}
+
+@media screen and (max-width:700px){
+    #arrow{
+        font-size: 2rem;
+    }
 }
 
 /* end styling the up-arrow */
