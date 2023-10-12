@@ -783,6 +783,7 @@ footer p{
 @media screen and (max-width:700px){
     #arrow{
         font-size: 2rem;
+        margin-left: -40%;
     }
 }
 
