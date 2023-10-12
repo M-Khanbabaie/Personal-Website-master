@@ -1,0 +1,790 @@
+/* General */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+p{
+    color: rgb(85, 85, 85)
+}
+
+
+/* Start nav section */
+
+.nav-list , .desktop-nav{
+    display: flex;
+}
+
+.desktop-nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+.logo span{
+    font-size: 1.6rem;
+    color: gray;
+}
+
+.nav-list{
+    gap: 1.2rem;
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+.nav-list a{
+    color: black;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.nav-list a:hover{
+    color: gray;
+    text-decoration: underline;
+    text-decoration-color: rgb(11, 155, 192);
+    text-underline-offset: .5rem;
+}
+
+.hambergur-nav{
+    display: none;
+}
+
+.hambergur-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.hambergur-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all .2s ease-in-out;
+}
+
+.hambergur-menu{
+    position: relative;
+    display: inline-block;
+}
+
+.hambergur-list{
+    display: flex;
+    position: absolute;
+    top: 3rem;
+    right: -1rem;
+    background-color: white;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .3s ease;
+}
+
+.hambergur-list a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all .2s ease-in-out;
+}
+
+.hambergur-list a:hover{
+    color: gray;
+    text-decoration: underline;
+    text-decoration-color: rgb(11, 155, 192);
+    text-underline-offset: .5rem;
+}
+
+.hambergur-list.open{
+    max-height: 300px;
+}
+
+.hambergur-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hambergur-icon.open span:nth-child(2){
+    opacity: 0;
+}
+
+.hambergur-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+@media screen and (max-width: 1200px) {
+    .desktop-nav{
+        display: none;
+    }
+
+   .hambergur-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    }
+}
+
+/* end nav section */
+
+/* Start profile section */
+
+.profile-section-container{
+    display: flex;
+    justify-content: center;
+    padding:10vh;
+    gap: 8rem;
+}
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.profile-pic img{
+    width: 322.917px;
+    height: 367.031px;
+    object-fit: cover;
+    border-radius: 100px 40px;
+    transition: all .2s ease;
+}
+
+.profile-text{
+    text-align: center;
+}
+
+.profile-text p{
+    font-weight: 600;
+}
+
+.profile-text p.profile-p1{
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.profile-text p.profile-p2{
+    font-size: 1.4rem;
+    margin-top: 5px;
+}
+
+.title{
+    font-size: 2.3rem;
+}
+
+.title span{
+    color: rgb(155, 155, 155);
+}
+
+.profile-btns{
+    display: flex;
+    justify-content: center;
+    gap: 1.9rem;
+    margin-top: -20px;
+}
+
+.profile-btns button{
+    font-weight: 600;
+    border-radius: 2rem;
+    width: 8rem;
+    height: 3rem;
+    border: 0.09rem solid rgb(53, 53, 53);
+    transition: all .2s ease;
+}
+
+.profile-btns button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: white;
+    background-color: rgb(114, 139, 114);
+    border: none;
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: -20px ;
+}
+
+.social-media img{
+    width: 30px;
+    height: 30px;
+    transition: all .2s ease;
+}
+
+.social-media img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+
+    .profile-section-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+    .profile-container{
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width:417px) {
+
+    .profile-pic img{
+        width: 80vw;
+        height: 367.031px;
+    }
+}
+
+@media screen and (max-width:617px) {
+
+    .hambergur-list a{
+        font-size: 1.1rem;
+    }
+    
+}
+
+
+/* end profile section */
+
+/* Start about section */
+
+#about{
+    padding: 7vh;
+}
+
+.about-title{
+    text-align: center;
+    font-size: .8rem;
+}
+
+#about h2{
+    text-align: center;
+    letter-spacing: .1rem;
+    font-size: 2rem;
+}
+
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 9vh;
+    gap: 1.5rem;
+}
+
+.about-cards{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 2rem;
+}
+
+.experience, .education{
+    border: 2px solid rgb(163, 163, 163);
+    border-radius: 2rem;
+    width: 20vw;
+    padding: 3%;
+}
+
+.about-me{
+    padding: 5% 5% 0 5%;
+    text-align: justify;
+}
+
+.about-pic img{
+    width: 322.917px;
+    height: 380px;
+    object-fit: cover;
+    border-radius:40px 100px;
+    transition: all .3s ease;
+}
+
+.experience img, .education img{
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width:980px){
+    .about-pic img{
+        height: 430px;
+    }
+}
+
+@media screen and (max-width:906px) {
+
+    .about-pic img{
+        height: 380px;
+    }
+
+    .about-container{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .experience, .education{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:560px) {
+
+    .experience, .education{
+        width: 100%;
+    }
+
+    .experience{
+        height: fit-content;
+        padding: 6%;
+    }
+
+    .about-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me{
+        margin-top: 5%;
+        width: 80vw;
+        padding-left: 0;
+    }
+
+}
+
+@media screen and (max-width:417px) {
+
+    .about-pic img{
+        width: 80vw;
+        height: 367.031px;
+    }
+}
+
+
+/* end about section */
+
+/* Start experience section */
+
+#experience{
+    padding: 10vh;
+}
+
+.experience-title{
+    text-align: center;
+    font-size: .8rem;
+}
+
+#experience h2{
+    text-align: center;
+    letter-spacing: .01rem;
+    font-size: 2rem;
+}
+
+.checkmark{
+    width: 30px;
+    height: 30px;
+}
+
+.experience-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 5%;
+}
+
+.frontend-skill, .backend-skill{
+    border: 2px solid rgb(163, 163, 163);
+    border-radius: 2rem;
+    width: 38vw;
+}
+
+#experience h3{
+    color: gray;
+    text-align: center;
+    padding: 4%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .05rem;
+}
+
+.frontend-skill-container, .backend-skill-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2% 2% 5% 2%;
+}   
+
+.skill-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2%;
+    border: 1px solid rgb(193, 183, 183);
+    border-radius: 2rem;
+    width: 30vw;
+    box-shadow: 4px 2px 5px 0px darkgray;
+}
+
+.skill{
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+}
+
+.slider-percentage{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.slider-out-html{
+    width: 12vw;
+    height: 10px;
+    border: 2px solid rgb(163, 163, 163);
+    border-radius: 2rem;
+}
+
+.slider-in-html{
+    background-color: darkgray;
+    width: 85%;
+    height: 10px;    
+    border-radius: 2rem;
+}
+
+.slider-out-css{
+    width: 12vw;
+    height: 10px;
+    border: 2px solid rgb(163, 163, 163);
+    border-radius: 2rem;
+}
+
+.slider-in-css{
+    background-color: darkgray;
+    width: 65%;
+    height: 10px;    
+    border-radius: 2rem;
+}
+
+.slider-out-js{
+    width: 12vw;
+    height: 10px;
+    border: 2px solid rgb(163, 163, 163);
+    border-radius: 2rem;
+}
+
+.slider-in-js{
+    background-color: darkgray;
+    width: 50%;
+    height: 10px;    
+    border-radius: 2rem;
+}
+
+.slider-out-sql{
+    width: 12vw;
+    height: 10px;
+    border: 2px solid rgb(163, 163, 163);
+    border-radius: 2rem;
+}
+
+.slider-in-sql{
+    background-color: darkgray;
+    width: 60%;
+    height: 10px;    
+    border-radius: 2rem;
+}
+
+.slider-out-node{
+    width: 12vw;
+    height: 10px;
+    border: 2px solid rgb(163, 163, 163);
+    border-radius: 2rem;
+}
+
+.slider-in-node{
+    background-color: darkgray;
+    width: 80%;
+    height: 10px;    
+    border-radius: 2rem;
+}
+
+.slider-out-git{
+    width: 12vw;
+    height: 10px;
+    border: 2px solid rgb(163, 163, 163);
+    border-radius: 2rem;
+}
+
+.slider-in-git{
+    background-color: darkgray;
+    width: 90%;
+    height: 10px;    
+    border-radius: 2rem;
+}
+
+@media screen and (max-width:1000px) {
+
+    #experience{
+        margin-top: -1vh;
+    }
+
+    .experience-container{
+        flex-direction: column;
+    }
+
+    .frontend-skill, .backend-skill{
+        width: 100%;
+    }
+    
+    .skill-card{
+        width: 70%;
+    }
+    
+}
+
+@media screen and (max-width:537px) {
+
+    #experience{
+        padding: 5vh;
+    }
+
+    .skill-card{
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+    }
+    
+}
+
+/* end experience section */
+
+/* Start projects section */
+
+#project{
+    padding: 10vh;
+}
+
+.project-title{
+    text-align: center;
+    font-size: .8rem;
+}
+
+#project h2{
+    text-align: center;
+    letter-spacing: .01rem;
+    font-size: 2rem;
+}
+
+.project-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 7vh;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border: 2px solid rgb(163, 163, 163);
+    border-radius: 2rem;
+    width: 24vw;    
+    padding: 4%;
+}
+
+.project-card h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .04rem;
+}
+
+.project-pic-container{
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.project-pic{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10%;
+    object-fit: cover;
+    transition: all .5s ease;
+}
+
+.project-pic-container:hover img{
+    transform: scale(1.1);
+}
+
+.project-btn{
+    display: flex;
+    justify-content: center;
+    gap: 1.9rem;
+    margin-top: -20px;
+}
+
+.project-btn button{
+    font-weight: 600;
+    border-radius: 2rem;
+    width: 10vw;
+    height: 3rem;
+    border: 0.09rem solid rgb(53, 53, 53);
+    font-size: 1.1rem;
+    transition: all .2s ease;
+}
+
+.project-btn button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: white;
+    background-color: rgb(114, 139, 114);
+    border: none;
+}
+
+@media screen and (max-width:1090px) {
+
+    .project-container{
+        flex-direction: column;
+    }
+
+    .project-card{
+        width: 70vw;
+    }
+    
+    .project-pic{
+        transition: width .2s ease;
+        width: 45vw;
+        height: 40vw;
+    }
+
+    .project-btn button{
+        width: 24vw;
+        font-size: .8rem;
+    }
+}
+
+/* end project section */
+
+/* Start contact */
+
+#contact{
+    padding: 10vh;
+}
+
+.contact-title{
+    text-align: center;
+    font-size: .8rem;
+}
+
+#contact h2{
+    text-align: center;
+    letter-spacing: .01rem;
+    font-size: 2rem;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6vh;
+}
+
+.contact-icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid rgb(163, 163, 163);
+    border-radius: 2rem;
+    padding: 2%; 
+    width: 60vw;
+    height: 10vw;
+}
+
+.contact-icon i{
+    font-size: xx-large;
+    transition: all .2s ease;
+}
+
+.contact-icon i:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+
+}
+
+@media screen and (max-width:500px) {
+
+    #contact{
+        padding: 5vh;
+    }
+
+    .contact-icon i{
+        font-size: large;
+    }
+
+}
+
+/* Start footer section */
+
+footer p{
+    text-align: center;
+}
+
+/* Start styling the up-arrow */
+
+.arrow{
+    display: none;
+    position: sticky;
+    left:96.5%;
+    bottom: 20px;
+    width: 23px;
+    height: 21px;
+    border: 4px solid black;
+    border-radius: 100%;
+    text-align: center;
+    padding-left: 2.5px;
+}
+
+.arrow img{
+    display: none;
+    width: 20px;
+    height: 20px;
+    transition: all .2s ease;
+}
+
+.arrow:hover{
+    border-color: rgb(125, 117, 117);
+}
+
+.arrow img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* end styling the up-arrow */
+
