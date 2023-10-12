@@ -760,8 +760,7 @@ footer p{
 
 .arrow{
     position: sticky;
-    margin-left: 94%;
-    bottom: 4px;
+    margin-left: 90%;
 }
 
 #arrow{
@@ -778,13 +777,6 @@ footer p{
     cursor: pointer;
     transform: scale(1.2);
     color: darkgray;
-}
-
-@media screen and (max-width:700px){
-    #arrow{
-        font-size: 2rem;
-        margin-left: -40%;
-    }
 }
 
 /* end styling the up-arrow */
