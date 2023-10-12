@@ -9,19 +9,16 @@ function toggleMenu(){
 
 // the up-arrow code
 
-const backToTopButton = document.querySelector(".arrow img");
-const backToTopdiv = document.querySelector('.arrow')
+const backToTopButton = document.querySelector("#arrow");
 
 window.addEventListener('scroll', scrollFunc);
 
 function scrollFunc() {
     if (window.scrollY > 300) {
         backToTopButton.style.display = 'block';
-        backToTopdiv.style.display = 'block';
     }
     else {
         backToTopButton.style.display = 'none';
-        backToTopdiv.style.display = 'none'
     }
 
 }
