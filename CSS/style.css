@@ -760,7 +760,7 @@ footer p{
 
 .arrow-container{
     position: fixed;
-    width: fit-content;    
+    width: 48px;    
     bottom: 10px;
     right: 10px;
 }
