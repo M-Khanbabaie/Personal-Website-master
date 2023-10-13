@@ -758,9 +758,11 @@ footer p{
 
 /* Start styling the up-arrow */
 
-.arrow{
-    position: sticky;
-    margin-left: 90%;
+.arrow-container{
+    position: fixed;
+    width: fit-content;    
+    bottom: 10px;
+    right: 10px;
 }
 
 #arrow{
@@ -769,14 +771,16 @@ footer p{
     transition: all .2s ease;
 }
 
-.arrow:hover{
-    border-color: rgb(125, 117, 117);
-}
-
 #arrow:hover{
     cursor: pointer;
     transform: scale(1.2);
     color: darkgray;
+}
+
+@media screen and (max-width:650px) {
+    #arrow{
+        font-size: 2.3rem;
+    }
 }
 
 /* end styling the up-arrow */
