@@ -14,18 +14,31 @@
   <body>
     <header>
       <nav class="desktop-nav">
-        <div class="logo">Mr.<span>Khanbabaie</span></div>
+        <div class="logo">
+          <p>Mr.<span>Khanbabaie</span></p>
+        </div>
         <div>
           <ul class="nav-list">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#project">Project</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li>
+              <img
+                id="modeToggle"
+                src="assets/images/theme_dark.png"
+                src-dark="assets/images/theme_dark.png"
+                src-light="assets/images/theme_light.png"
+                alt="dark-light icon"
+              />
+            </li>
           </ul>
         </div>
       </nav>
       <nav class="hambergur-nav">
-        <div class="logo">Mr.<span>Khanbabaie</span></div>
+        <div class="logo">
+          <p>Mr.<span>Khanbabaie</span></p>
+        </div>
         <div class="hambergur-menu">
           <div class="hambergur-icon" onclick="toggleMenu()">
             <span></span>
@@ -33,6 +46,17 @@
             <span></span>
           </div>
           <ul class="hambergur-list">
+            <div>
+              <li>
+                <img
+                  id="modeToggle2"
+                  src="assets/images/theme_dark.png"
+                  src-dark="assets/images/theme_dark.png"
+                  src-light="assets/images/theme_light.png"
+                  alt="dark-light icon"
+                />
+              </li>
+            </div>
             <div>
               <li><a href="#about" onclick="toggleMenu()">About</a></li>
               <li>
@@ -71,16 +95,20 @@
         <div class="social-media">
           <a href="https://github.com/M-Khanbabaie" target="_blank">
             <img
-              src="assets/images/github.png"
+              src="assets/images/github_light.png"
+              src-light="assets/images/github_light.png"
+              src-dark="assets/images/github_dark.png"
               alt="github-logo"
-              class="profile-img1"
+              class="mode profile-img1"
             />
           </a>
           <a href="https://www.linkedin.com/" target="_blank">
             <img
-              src="assets/images/linkedin.png"
+              src="assets/images/linkedin_light.png"
+              src-light="assets/images/linkedin_light.png"
+              src-dark="assets/images/linkedin_dark.png"
               alt="linkedin-logo"
-              class="profile-img2"
+              class="mode profile-img2"
             />
           </a>
         </div>
@@ -99,12 +127,24 @@
         <div>
           <div class="about-cards">
             <div class="experience">
-              <img src="assets/images/experience.png" alt="experience-logo" />
+              <img
+                class="mode"
+                src="assets/images/experience_light.png"
+                src-light="assets/images/experience_light.png"
+                src-dark="assets/images/experience_dark.png"
+                alt="experience-logo"
+              />
               <h3>Experiences</h3>
               <p>2+ years<br />Frontend Developer</p>
             </div>
             <div class="education">
-              <img src="assets/images/education.png" alt="education-logo" />
+              <img
+                class="mode"
+                src="assets/images/education_light.png"
+                src-light="assets/images/education_light.png"
+                src-dark="assets/images/education_dark.png"
+                alt="education-logo"
+              />
               <h3>Education</h3>
               <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
             </div>
@@ -134,8 +174,10 @@
             <article class="skill-card">
               <div class="skill">
                 <img
-                  class="checkmark"
-                  src="assets/images/checkmark.png"
+                  class="mode checkmark"
+                  src="assets/images/checkmark_light.png"
+                  src-light="assets/images/checkmark_light.png"
+                  src-dark="assets/images/checkmark_dark.png"
                   alt="checkmark"
                 />
                 <p>HTML</p>
@@ -150,8 +192,10 @@
             <article class="skill-card">
               <div class="skill">
                 <img
-                  class="checkmark"
-                  src="assets/images/checkmark.png"
+                  class="mode checkmark"
+                  src="assets/images/checkmark_light.png"
+                  src-light="assets/images/checkmark_light.png"
+                  src-dark="assets/images/checkmark_dark.png"
                   alt="checkmark"
                 />
                 <p>CSS</p>
@@ -166,8 +210,10 @@
             <article class="skill-card">
               <div class="skill">
                 <img
-                  class="checkmark"
-                  src="assets/images/checkmark.png"
+                  class="mode checkmark"
+                  src="assets/images/checkmark_light.png"
+                  src-light="assets/images/checkmark_light.png"
+                  src-dark="assets/images/checkmark_dark.png"
                   alt="checkmark"
                 />
                 <p>JavaScript</p>
@@ -187,8 +233,10 @@
             <article class="skill-card">
               <div class="skill">
                 <img
-                  class="checkmark"
-                  src="assets/images/checkmark.png"
+                  class="mode checkmark"
+                  src="assets/images/checkmark_light.png"
+                  src-light="assets/images/checkmark_light.png"
+                  src-dark="assets/images/checkmark_dark.png"
                   alt="checkmark"
                 />
                 <p>PostgreSQL</p>
@@ -203,8 +251,10 @@
             <article class="skill-card">
               <div class="skill">
                 <img
-                  class="checkmark"
-                  src="assets/images/checkmark.png"
+                  class="mode checkmark"
+                  src="assets/images/checkmark_light.png"
+                  src-light="assets/images/checkmark_light.png"
+                  src-dark="assets/images/checkmark_dark.png"
                   alt="checkmark"
                 />
                 <p>Node JS</p>
@@ -219,8 +269,10 @@
             <article class="skill-card">
               <div class="skill">
                 <img
-                  class="checkmark"
-                  src="assets/images/checkmark.png"
+                  class="mode checkmark"
+                  src="assets/images/checkmark_light.png"
+                  src-light="assets/images/checkmark_light.png"
+                  src-dark="assets/images/checkmark_dark.png"
                   alt="checkmark"
                 />
                 <p>Git</p>

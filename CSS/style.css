@@ -1,3 +1,30 @@
+/* variables */
+
+:root{
+    --background-color: rgb(255, 255, 255);
+    --switch-color: black;
+    --span-text-color: gray;
+    --text-color: rgb(85,85,85);
+    --btn-text-color: black;
+    --subtitle: rgb(116 71 71);
+    --border-color : rgb(163,163,163);
+    --shadow: 4px 2px 5px 0px darkgray;
+
+}
+
+[theme='dark']{
+    --background-color: rgb(33, 33, 33);
+    --switch-color: white;
+    --span-text-color: rgb(199 199 199);
+    --text-color: rgb(170, 170, 170);
+    --btn-text-color: rgb(16 155 142);
+    --subtitle:rgb(229 218 218);
+    --border-color: white;
+    --shadow: 0px 0px 0px 4px rgb(214 217 216);
+}
+
+
+
 /* General */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
@@ -13,10 +40,11 @@ html{
 
 body{
     font-family: "Poppins", sans-serif;
+    background-color: var(--background-color);
 }
 
 p{
-    color: rgb(85, 85, 85)
+    color: var(--text-color);
 }
 
 
@@ -40,19 +68,24 @@ p{
     cursor: default;
 }
 
+.logo p{
+    color: var(--switch-color);
+}
+
 .logo span{
     font-size: 1.6rem;
-    color: gray;
+    color: var(--span-text-color);
 }
 
 .nav-list{
     gap: 1.2rem;
+    align-items: center;
     list-style: none;
     font-size: 1.4rem;
 }
 
 .nav-list a{
-    color: black;
+    color: var(--switch-color);
     text-decoration: none;
     transition: all .2s ease;
 }
@@ -80,7 +113,7 @@ p{
 .hambergur-icon span{
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: var(--switch-color);
     transition: all .2s ease-in-out;
 }
 
@@ -91,10 +124,11 @@ p{
 
 .hambergur-list{
     display: flex;
+    align-items: baseline;
     position: absolute;
     top: 3rem;
     right: -1rem;
-    background-color: white;
+    background-color: var(--background-color);
     list-style: none;
     overflow: hidden;
     max-height: 0;
@@ -105,7 +139,7 @@ p{
     display: block;
     text-align: center;
     padding: 10px;
-    color: black;
+    color: var(--switch-color);
     text-decoration: none;
     font-size: 1.3rem;
     transition: all .2s ease-in-out;
@@ -192,10 +226,11 @@ p{
 
 .title{
     font-size: 2.3rem;
+    color: var(--switch-color);
 }
 
 .title span{
-    color: rgb(155, 155, 155);
+    color: var(--span-text-color);
 }
 
 .profile-btns{
@@ -212,6 +247,7 @@ p{
     height: 3rem;
     border: 0.09rem solid rgb(53, 53, 53);
     transition: all .2s ease;
+    color: var(--btn-text-color);
 }
 
 .profile-btns button:hover{
@@ -287,6 +323,7 @@ p{
     text-align: center;
     letter-spacing: .1rem;
     font-size: 2rem;
+    color: var(--switch-color);
 }
 
 .about-container{
@@ -305,10 +342,14 @@ p{
 }
 
 .experience, .education{
-    border: 2px solid rgb(163, 163, 163);
+    border: 2px solid var(--border-color);
     border-radius: 2rem;
     width: 20vw;
     padding: 3%;
+}
+
+.experience h3, .education h3{
+    color: var(--switch-color);
 }
 
 .about-me{
@@ -401,6 +442,7 @@ p{
     text-align: center;
     letter-spacing: .01rem;
     font-size: 2rem;
+    color: var(--switch-color);
 }
 
 .checkmark{
@@ -417,7 +459,7 @@ p{
 }
 
 .frontend-skill, .backend-skill{
-    border: 2px solid rgb(163, 163, 163);
+    border: 2px solid var(--border-color);
     border-radius: 2rem;
     width: 38vw;
 }
@@ -429,6 +471,7 @@ p{
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: .05rem;
+    color: var(--subtitle);
 }
 
 .frontend-skill-container, .backend-skill-container{
@@ -445,10 +488,10 @@ p{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 2%;
-    border: 1px solid rgb(193, 183, 183);
+    border: 1px solid var(--border-color);
     border-radius: 2rem;
     width: 30vw;
-    box-shadow: 4px 2px 5px 0px darkgray;
+    box-shadow: var(--shadow);
 }
 
 .skill{
@@ -466,7 +509,7 @@ p{
 .slider-out-html{
     width: 12vw;
     height: 10px;
-    border: 2px solid rgb(163, 163, 163);
+    border: 2px solid var(--border-color);
     border-radius: 2rem;
 }
 
@@ -480,7 +523,7 @@ p{
 .slider-out-css{
     width: 12vw;
     height: 10px;
-    border: 2px solid rgb(163, 163, 163);
+    border: 2px solid var(--border-color);
     border-radius: 2rem;
 }
 
@@ -494,7 +537,7 @@ p{
 .slider-out-js{
     width: 12vw;
     height: 10px;
-    border: 2px solid rgb(163, 163, 163);
+    border: 2px solid var(--border-color);
     border-radius: 2rem;
 }
 
@@ -508,7 +551,7 @@ p{
 .slider-out-sql{
     width: 12vw;
     height: 10px;
-    border: 2px solid rgb(163, 163, 163);
+    border: 2px solid var(--border-color);
     border-radius: 2rem;
 }
 
@@ -522,7 +565,7 @@ p{
 .slider-out-node{
     width: 12vw;
     height: 10px;
-    border: 2px solid rgb(163, 163, 163);
+    border: 2px solid var(--border-color);
     border-radius: 2rem;
 }
 
@@ -536,7 +579,7 @@ p{
 .slider-out-git{
     width: 12vw;
     height: 10px;
-    border: 2px solid rgb(163, 163, 163);
+    border: 2px solid var(--border-color);
     border-radius: 2rem;
 }
 
@@ -598,6 +641,7 @@ p{
     text-align: center;
     letter-spacing: .01rem;
     font-size: 2rem;
+    color: var(--switch-color);
 }
 
 .project-container{
@@ -613,7 +657,7 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    border: 2px solid rgb(163, 163, 163);
+    border: 2px solid var(--border-color);
     border-radius: 2rem;
     width: 24vw;    
     padding: 4%;
@@ -623,6 +667,7 @@ p{
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: .04rem;
+    color: var(--subtitle);
 }
 
 .project-pic-container{
@@ -657,6 +702,7 @@ p{
     border: 0.09rem solid rgb(53, 53, 53);
     font-size: 1.1rem;
     transition: all .2s ease;
+    color: var(--btn-text-color);
 }
 
 .project-btn button:hover{
@@ -706,6 +752,7 @@ p{
     text-align: center;
     letter-spacing: .01rem;
     font-size: 2rem;
+    color: var(--switch-color);
 }
 
 .contact-container{
@@ -719,7 +766,7 @@ p{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid rgb(163, 163, 163);
+    border: 2px solid var(--border-color);
     border-radius: 2rem;
     padding: 2%; 
     width: 60vw;
@@ -728,6 +775,7 @@ p{
 
 .contact-icon i{
     font-size: xx-large;
+    color: var(--switch-color);
     transition: all .2s ease;
 }
 
@@ -767,6 +815,7 @@ footer p{
 
 #arrow{
     display: none;
+    color: var(--switch-color);
     font-size: 3em;
     transition: all .2s ease;
 }
@@ -787,3 +836,15 @@ footer p{
 
 /* end styling the up-arrow */
 
+/* Start dark-light mode image */
+
+#modeToggle, #modeToggle2{
+    width: 30px; 
+    height: 30px;
+    transition: all .2s ease;
+}
+
+#modeToggle:hover, #modeToggle2:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
