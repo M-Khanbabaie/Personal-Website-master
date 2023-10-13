@@ -771,10 +771,12 @@ footer p{
     transition: all .2s ease;
 }
 
-#arrow:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-    color: darkgray;
+@media (hover: hover) {
+    #arrow:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+        color: darkgray;
+    }
 }
 
 @media screen and (max-width:650px) {
