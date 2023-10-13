@@ -241,7 +241,7 @@ p{
     cursor: pointer;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 780px) {
 
     .profile-section-container{
         flex-direction: column;

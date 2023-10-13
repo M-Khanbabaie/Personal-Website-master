@@ -19,6 +19,7 @@ function scrollFunc() {
     }
     else {
         backToTopButton.style.display = 'none';
+        backToTopButton.style.color = 'black';
     }
 
 }
